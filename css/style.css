@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600&family=Karla:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* custom properties */
+
+:root{
+    --ff--primary: 'poppins', sans-serif;
+    --ff--secondary: "poppins", monospace;
+
+    --fw-reg: 300;
+    --fw-bold: 700;
+
+    --cl-light: #fff;
+    --cl-dark: #303030;
+    --cl-accent: #16e0bd;
+    --clr-gold: #c59d5f;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, .25), 0.125em 0.125em, 0.125em rgba(0, 0, 0, .15);
+
+}
+
+@media(min-width: 800px){
+    :root{
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.25rem;
+    }
+}
+
+body{
+    background: var(--cl-dark);
+    color: var(--cl-dark);
+    margin: 0;
+    font-family: var(--ff--primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+}
+
+section{
+    padding: 5em 2em;
+}
+
+h1,
+h2,
+h3{
+    line-height: 1;
+    margin: 0;
+}
+
+h1{
+    font-size: var(--fs-h1);
+}
+
+h2{
+    font-size: var(--fs-h2);
+}
+
+h3{
+    font-size: var(--fs-h3);
+}
+
+
+.title{
+    margin-top: 5vh;
+    margin-bottom: 2em;
+}
+
+.title h2{
+    text-align: center;
+    font-size: var(--fs-h3);
+    color: var(--clr-gold);
+}
+
+@media screen and (min-width: 800px) {
+    .title h2{
+        font-size: var(--fs-h2);
+    }
+}
+
+.question-center{
+    margin: 0 auto;
+    padding: .45em;
+}
+
+@media screen and (min-width: 800px) {
+    .question-center{
+        width: 50vw;
+        max-width: 1170px;
+    }
+}
+
+.question{
+    background: var(--cl-light);
+    border-radius: .50em;
+    box-shadow: var(--bs);
+    padding: .60em .60em 0 .60em;
+    margin-bottom: 1em;
+}
+
+.question-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding-bottom: .80em;
+}
+
+.question-btn{
+    font-size: 1em;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: var(--clr-gold);
+}
+
+.question-title p{
+    margin-bottom: 0;
+    letter-spacing: .15em;
+    color: var(--clr-gold);
+}
+
+.question-text{
+    padding: .60em 0 .80em 0;
+    border-top: 1px solid rgba(0, 0, 0, .25);
+    color: grey;
+}
+
+.question-text p{
+    margin-bottom: 0;
+}
+
+/* hide text */
+
+.question-text{
+    display: none;
+}
+
+.show-text .question-text{
+    display: block;
+}
